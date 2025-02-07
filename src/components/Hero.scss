@@ -1,0 +1,20 @@
+.link1
+        {
+            line-height: 40px;
+            background: rgba(0,0,0,0.3);
+            width: max-content;
+            display: block;
+            display: flex;
+            z-index: 2;
+            gap: 0.8rem;
+            border-radius: 3rem;
+        
+            a{
+                background: transparent;
+                padding: 0.9rem;
+                border-radius: 50%;
+                display: flex;
+                color: var(--color-light);
+                font-size: 2rem;
+            }
+        }

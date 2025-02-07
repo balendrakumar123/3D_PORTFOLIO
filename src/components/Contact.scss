@@ -1,0 +1,45 @@
+
+  .contact__options {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .contact__option {
+    display: flex;
+    flex-direction: row;
+    padding: 0.6rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    align-items: center;
+    border: 1px solid white;
+    gap: 0.8rem;
+  }
+
+  .contactImg{
+    height: 500px;
+  }
+  
+  .contact__option:hover {
+    text-decoration: underline;
+  }
+  .earthImg {
+    animation: rotateEarth 10s linear infinite;
+  }
+  
+  .earthhai{
+    position: relative;
+  }
+  .ash{
+    position: absolute;
+  }
+  @keyframes rotateEarth {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg); /* Negative for right-to-left rotation */
+    }
+  }
+ 

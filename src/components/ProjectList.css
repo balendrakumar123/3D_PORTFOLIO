@@ -1,0 +1,89 @@
+.projectCat {
+    display: flex;
+    justify-content: center; /* Align items horizontally */
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    perspective: 1200px; /* Add perspective for a stronger 3D effect */
+}
+
+.portfoliolist {
+    font-size: 16px; /* Slightly larger font */
+    margin: 0px 15px; /* Add spacing between items */
+    padding: 12px 20px; /* Adjust padding for better proportions */
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    background: darkblue; /* Dark blue background */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    transform: translateZ(0); /* Default flat position */
+    box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.2), -8px -8px 20px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;
+}
+
+.portfoliolist.active {
+    background: #1e90ff; /* Bright blue background for active */
+    color: white; /* Keep text white */
+    transform: translateZ(-10px); /* Make it look pressed down */
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.4), inset -8px -8px 15px rgba(255, 255, 255, 0.2); /* Inset shadow for pressed effect */
+}
+
+.portfoliolist:hover {
+    animation: hoverEffect 0.6s ease-in-out forwards; /* Add hover animation */
+}
+
+.portfoliolist:active {
+    animation: clickEffect 0.3s ease-in-out forwards; /* Add click animation */
+}
+
+/* Keyframes for hover animation */
+@keyframes hoverEffect {
+    0% {
+        transform: translateZ(0);
+        box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.2), -8px -8px 20px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: translateZ(15px) rotateX(5deg) rotateY(-5deg);
+        box-shadow: 12px 12px 30px rgba(255, 255, 255, 0.3), -12px -12px 30px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: translateZ(10px);
+        box-shadow: 10px 10px 25px rgba(255, 255, 255, 0.2), -10px -10px 25px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Keyframes for click animation */
+@keyframes clickEffect {
+    0% {
+        transform: translateZ(10px);
+        box-shadow: 10px 10px 25px rgba(255, 255, 255, 0.2), -10px -10px 25px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: translateZ(-10px);
+        box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.4), inset -8px -8px 15px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.portfoliolist {
+	background: #2f2f2f;
+	border: none;
+	padding: 10px 20px;
+	font-size: 14px;
+	border-radius: 4px;
+	color: #c4c4c4;
+	box-shadow:
+		1px 1px 5px #000,
+		-1px -1px 5px #6f6f6f,
+		inset 1px 1px 5px #2b2b2b,
+		inset -1px -1px 5px #424242;
+	transition: all 0.1s;
+}
+
+.portfoliolist:active {
+	box-shadow:
+		1px 1px 5px #5b5b5b,
+		-1px -1px 5px #000,
+		inset 1px 1px 5px #5b5b5b,
+		inset -1px -1px 5px #000;
+}
